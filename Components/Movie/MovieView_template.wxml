@@ -1,0 +1,16 @@
+<import src="StarView_template.wxml" />
+
+<template name="MovieView">
+
+  <view class="MovieView_container" catchtap='onMovieTap' data-movie-id="{{movieId}}">
+
+    <image class="MovieView_image" src="{{coverImage}}"></image>
+
+    <text class="MovieView_title">{{title}}</text>
+
+    <template is="StarView" data="{{stars:stars,average:average}}"/>
+
+  </view>
+
+
+</template>

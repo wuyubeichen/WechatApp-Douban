@@ -1,0 +1,50 @@
+.LogInTwoView_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: purple; */
+  align-items: center;
+}
+
+.LogInTwoView_Title {
+  margin-top: 80rpx;
+  font-size: 30px;
+  text-align: center;
+  color: #39b146;
+}
+
+.LogInTwoView_inputView {
+  width: 690rpx;
+  margin-top: 80rpx;
+  border: 0.5rpx solid #cccccc;
+  border-radius: 10rpx;
+}
+
+input{
+  padding-left: 10px;
+  height: 80rpx;
+  color: #333;
+  font-size: 15px;
+}
+.placeholder{
+  color: #cccccc;
+  font-size: 15px;
+}
+
+.sepratorLineView{
+  width: 690rpx;
+  height: 0.5px;
+  background-color: #cccccc;
+} 
+.LogInTwoView_LoginBtn{
+  margin-top: 80rpx;
+  width: 690rpx;
+  height: 100rpx;
+  background-color: #39b146;
+  border-radius: 10rpx;
+  color: white;
+  font-size: 18px;
+  line-height: 100rpx;
+
+}

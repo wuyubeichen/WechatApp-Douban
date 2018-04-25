@@ -1,0 +1,30 @@
+<import src="MovieView_template.wxml" />
+
+<template name="RowMovieView">
+
+
+  <view class="RowMovieView_container">
+<!--正在热映、更多  -->
+      <view class="RowMovieView_sectionOne">
+        <view class="RowMovieView_sectionOne_right">
+          <text catchtap='onMoreTap' data-category-name="{{categoryName}}" class="RowMovieView_moreText">更多</text>
+          <image class="RowMovieView_arrowImage" src="/Resources/Pictures/Common/arrow-right.png"></image>
+        </view>
+
+        <view class="RowMovieView_sectionOne_left">
+          <view class="RowMovieView_rectView" class="RowMovieView_rectView"></view>
+          <text class="RowMovieView_slogan">{{categoryName}}</text>
+        </view>
+      </view>
+
+<!--电影轮播图  -->
+      <scroll-view scroll-x="true" class="RowMovieView_sectionTwo">
+        <block wx:for="{{movies}}" wx:for-index="index" wx:for-item="movie">
+          <view class="MoviewView">
+            <template is="MovieView" data="{{...movie}}" />
+          </view>
+        </block>
+      </scroll-view>
+
+  </view>
+</template>

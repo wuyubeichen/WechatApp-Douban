@@ -1,0 +1,46 @@
+<!--pages/Mine/mine.wxml-->
+<import src="../../../Components/MineCell/MineCell_template.wxml" />
+
+<!--未登录时显示  -->
+<image wx:if="{{!haveLoginUserInfo}}" class="login_BgImage" src="/Resources/Pictures/Common/doubanLoginBg.png" />
+
+<view wx:if="{{!haveLoginUserInfo}}" class="login_noHeader">
+  <image class="login_noHeader_image" src="/Resources/Pictures/Common/noLogInHeader.png"></image>
+  <text class="login_noHeader_text">未登录</text>
+</view>
+
+<view wx:if="{{!haveLoginUserInfo}}" class="login_BtnView" bindtap="onLogInTap">
+  <image class="login_BtnView_image" src="/Resources/Pictures/Common/loginArrow.png"></image>
+  <text class="login_BtnView_text">登录</text>
+</view>
+
+<!--已经存在登录信息  -->
+<view wx:if="{{haveLoginUserInfo}}"class="container">
+  <!--头像昵称  -->
+  <view class="headerView">
+    <image class="headerImage" src="/Resources/Pictures/Common/header.png"></image>
+    <text class="headerName">风恣</text>
+  </view>
+
+  <!--我的钱包、礼券、关注、订单、消息  -->
+  <view class="sectionViewOne">
+    <block wx:for="{{setionOneData}}" wx:for-index="index" wx:for-item="item">
+      <view>
+        <template is="MineCell" data="{{...item}}" />
+      </view>
+    </block>
+  </view>
+
+  <!--成为专家、帮助反馈、关于  -->
+  <view class="sectionViewTwo">
+    <block wx:for="{{setionTwoData}}" wx:for-index="index" wx:for-item="item">
+      <view>
+        <template is="MineCell" data="{{...item}}" />
+      </view>
+    </block>
+  </view>
+
+  <!--客服电话、服务时间  -->
+  <text class="phone_text">客服电话:40067-91577</text>
+  <text class="serviceTime_text">服务时间:(工作日9:00-18:00)</text>
+</view>

@@ -1,0 +1,13 @@
+<template name="StarView">
+  <view class="StarView_container">
+
+    <view class="StarView_images">
+    <block wx:for="{{stars}}" wx:for-index="index" wx:for-item="item">
+          <image wx:if="{{item}}" src="/Resources/Pictures/Common/star.png"></image>
+          <image wx:else="{{item}}" src="/Resources/Pictures/Common/none-star.png"></image>
+    </block>
+
+    </view>
+    <text class="StarView_text">{{average +"分"}}</text>
+  </view>
+</template>

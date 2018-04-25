@@ -1,0 +1,27 @@
+<!--pages/StudyFiles/Movies/Movies.wxml-->
+<import src="/Components/Movie/RowMoiveView_template.wxml" />
+<import src="/Components/Movie/MoreMovieView_template.wxml" />
+
+
+
+<view class="searchView">
+   <view class="searchView_white" bindtap='onSearchViweTap'> 
+     <icon class="searchIcon" type="search" size="15" color="#405f80"></icon>
+     <text class="searchText">搜索</text>
+   </view> 
+</view>
+
+
+<view class="container">
+  <view class="RowMovieView_template">
+    <template is="RowMovieView" data="{{...in_theaters}}" />
+  </view>
+
+  <view class="RowMovieView_template">
+    <template is="RowMovieView" data="{{...coming_soon}}" />
+  </view>
+
+  <view class="RowMovieView_template">
+    <template is="RowMovieView" data="{{...top250}}" />
+  </view>
+</view>

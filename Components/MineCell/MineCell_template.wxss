@@ -1,0 +1,22 @@
+
+.MineCell_container{
+	display: flex;
+	flex-direction: row;
+	background-color: #ffffff;
+	border-bottom: 0.5px;
+	align-items: center;
+	height: 100rpx;
+}
+
+
+.iconImage{
+	margin-left: 30rpx;
+	margin-right: 20rpx;
+	width: 30rpx;
+	height: 30rpx;
+}
+
+.title{
+	font-size: 15px;
+	color: #333333;
+}

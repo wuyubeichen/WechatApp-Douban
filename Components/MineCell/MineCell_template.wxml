@@ -1,0 +1,6 @@
+<template name="MineCell">
+  <view class="MineCell_container">
+    <image class="iconImage" src="{{iconImage}}"></image>
+    <text class="title">{{title}}</text>
+  </view>
+</template>

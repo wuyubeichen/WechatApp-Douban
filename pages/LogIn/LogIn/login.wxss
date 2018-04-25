@@ -1,0 +1,4 @@
+/* pages/LogIn/Login/login.wxss */
+
+@import "/Components/LogInView/LogInOneView_template.wxss";
+@import "/Components/LogInView/LogInTwoView_template.wxss";

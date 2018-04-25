@@ -1,0 +1,45 @@
+/* pages/BuyRead/buyread.wxss */
+@import "../../../Components/ArticalCell/ArticalCell_template.wxss";
+@import "../../../Components/Movie/MoreMovieView_template.wxss";
+
+.searchView {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80rpx;
+  align-items: center;
+  background-color: white;
+}
+
+.searchIcon {
+  margin: 0 30rpx;
+  /* background-color: orange */
+}
+
+.searchInputView {
+  height: 100%;
+  width: 600rpx;
+  margin-right: 20rpx;
+  font-size: 15px;
+  color: purple;
+  /* background-color: orange; */
+}
+.placeholder {
+  font-size: 14px;
+  color: #d1d1d1;
+  margin-left: 0rpx;
+}
+.searchCancelImg {
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 30rpx;
+}
+
+
+/*展示搜索结果的视图  */
+.search_pannel {
+  width: 100%;
+  position: absolute;
+  top: 80rpx;
+  background-color: #f5f5f5;
+}

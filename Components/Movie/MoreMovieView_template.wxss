@@ -1,0 +1,50 @@
+@import "MovieView_template.wxss";
+
+.MoreView_container {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+
+  /* background-color: red; */
+  padding:0 30rpx;
+
+  box-sizing: border-box;
+  height: 1300rpx;
+
+  /* box-sizing: content-box; *//* align-content: space-between; *//* justify-content:space-around;  *//* padding: 30rpx; *//* padding-top: 30rpx; *//* padding-bottom: 30rpx; *//* box-sizing: content-box; *//* align-content:space-between; */
+}
+
+/* .MoreView_inner{
+   margin:0 auto;  
+} */
+.Movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: blue;
+  width: 690rpx;
+  align-content: flex-start;
+
+  /* padding: 30rpx; */
+  /* box-sizing: content-box; */
+  /* padding-left: 30rpx; */
+}
+
+.MoreView_MovieCell {
+  /* margin: 0 22rpx; */
+   margin-bottom: 30rpx;  
+  /* margin-right: 10rpx;   */
+  /* background-color: gray; */
+  /* box-sizing: border-box; */
+  /* margin-right: 45rpx; */
+  /* margin-right:auto; */
+  margin-right: 6.5217%;
+}
+
+.MoreView_MovieCell:nth-child(3n){
+  margin-right: 0rpx;
+}

@@ -1,0 +1,16 @@
+<template name = "ArticalCell">
+
+<view class = "arcicalCell_container">
+  <text class="aricalCell_title">{{title}}</text>
+  <view class="aricalCell_info">
+    <image class="articalCell_icon" src="/Resources/Pictures/Common/calendar.png"></image>
+    <text class="aricalCell_create">{{create}}</text>
+    <image class="articalCell_icon" src="/Resources/Pictures/Common/pinglun_icon.png"></image>
+    <text class="aricalcell_comment">{{comment}}</text>
+  </view>
+  <text class="articalCell_brief">{{brief}}</text>
+
+  <view class="articalCell_continue"><view class ="articalCell_continueText">继续阅读</view></view>
+
+</view>
+</template>

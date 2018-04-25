@@ -1,0 +1,99 @@
+/* pages/Mine/mine.wxss */
+@import "../../../Components/MineCell/MineCell_template.wxss";
+
+/*未登录时显示的视图  */
+.login_BgImage {
+  width: 100%;
+  height: 350rpx;
+}
+
+.login_noHeader {
+  position: absolute;
+  top: 50rpx;
+  left: 285rpx;
+  display: flex;
+  flex-direction: column;
+  /* background-color: purple; */
+}
+.login_noHeader_image {
+  width: 180rpx;
+  height: 180rpx;
+}
+.login_noHeader_text {
+  margin-top: 20rpx;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.login_BtnView {
+  position: absolute;
+  /* background-color: purple; */
+  display: flex;
+  flex-direction: row;
+  top: 30rpx;
+  right: 30rpx;
+  padding: 8rpx 15rpx;
+  border: 1rpx solid #fff;
+  border-radius: 10rpx;
+}
+.login_BtnView_image {
+  width: 20px;
+  height: 20px;
+}
+.login_BtnView_text {
+  margin-left: 10rpx;
+  font-size: 15px;
+  color: white; 
+}
+
+
+/*登录状态下显示列表  */
+.headerView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 160rpx;
+  background-color: #fff;
+}
+
+.headerImage {
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+  border-radius: 50rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.headerName {
+  font-size: 17px;
+  color: #333;
+}
+
+.sectionViewOne {
+  margin-top: 20rpx;
+}
+
+.sectionViewTwo {
+  margin-top: 20rpx;
+}
+
+.phone_text {
+  font-size: 15px;
+  color: #f42c28;
+  text-align: center;
+  background-color: #fff;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 20rpx;
+}
+
+.serviceTime_text {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}

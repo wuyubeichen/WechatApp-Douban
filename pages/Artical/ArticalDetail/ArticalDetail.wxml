@@ -1,0 +1,30 @@
+<!--pages/ArticalDetail/ArticalDetail.wxml-->
+<view class="container"> 
+               
+<image class="topImage" src= "{{artical.topImage}}"></image>
+
+<image catchtap='onMusicTap' class="musicImage" src="{{isPlayMusic?'../../../Resources/Pictures/Common/music-stop.png' :'../../../Resources/Pictures/Common/music-start.png'}}"></image>
+
+<view class="artical_info">
+  <image class="artical_info_headerImage" src="{{artical.topImage}}"></image>
+  <text class="artical_info_author">{{artical.author}}</text>
+  <text class="artical_info_publish">发表于</text>
+  <text class="artical_info_date">{{artical.create}}</text>
+</view>
+
+<text class="artical_title">{{artical.title}}</text>
+
+<view class="artical_optionView">
+  <image catchtap='onShareTap' src="../../../Resources/Pictures/Common/share.png"></image>
+
+  <image catchtap='onCollectionTap' wx:if="{{haveCollectioned}}" src="../../../Resources/Pictures/Common/collection.png"></image>
+  <image catchtap='onCollectionTap' wx:else src="../../../Resources/Pictures/Common/collection-anti.png"></image>
+
+  <view class="artical_optionLine"></view>
+</view>
+
+
+<text class="artical_content">{{artical.detail}}</text>
+
+</view>
+

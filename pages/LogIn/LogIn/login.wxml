@@ -1,0 +1,9 @@
+<!--pages/LogIn/Login/login.wxml-->
+<import src="../../../Components/LogInView/LogInOneView_template.wxml" />
+
+<import src="../../../Components/LogInView/LogInTwoView_template.wxml" />
+
+<template  wx:if="{{userInfo}}" is="LogInOneView" data="{{...userInfo}}"></template>
+
+<template  wx:else is="LogInTwoView" ></template>
+

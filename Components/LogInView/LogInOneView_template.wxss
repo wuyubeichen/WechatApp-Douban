@@ -1,0 +1,40 @@
+.LogInOneView_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: purple; */
+  align-items: center;
+}
+
+.LogInOneView_headerImage {
+  margin-top: 100rpx;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 90rpx;
+}
+
+.LogInOneView_name {
+  margin-top: 30rpx;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+.LogInOneView_WechatLogin {
+  margin-top: 100rpx;
+  width: 690rpx;
+  height: 100rpx;
+  background-color: #39b146;
+  border-radius: 10rpx;
+  color: white;
+  font-size: 18px;
+  line-height: 100rpx;
+}
+
+.LogInOneView_phoneLogin {
+  margin-top: 30rpx;
+  font-size: 15px;
+  color: #999;
+  text-align: center;
+}

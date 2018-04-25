@@ -1,0 +1,24 @@
+.StarView_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* background-color: purple; */
+}
+
+.StarView_images {
+  display: flex;
+  flex-direction: row;
+  height: 17rpx;
+  margin-right: 24rpx;
+}
+
+.StarView_images image {
+  padding-left: 3rpx;
+  height: 17rpx;
+  width: 17rpx;
+}
+
+.StarView_text {
+  font-size: 13px;
+  color: "#1f3463";
+}

@@ -1,0 +1,34 @@
+/* pages/StudyFiles/Movies/Movies.wxss */
+@import "../../../Components/Movie/RowMoiveView_template.wxss";
+@import "../../../Components/Movie/MoreMovieView_template.wxss";
+
+.searchView {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90rpx;
+  background-color: #39B146;
+}
+
+.searchView_white{
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 15rpx;
+  margin-left: 25rpx;
+  width:700rpx;
+  height: 60rpx;
+  background-color: white;
+  border-radius: 10rpx; 
+}
+
+.searchIcon {
+margin-right: 20rpx;
+} 
+
+.searchText{
+  font-size: 14px;
+  color: #999999;
+
+}

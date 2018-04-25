@@ -1,0 +1,10 @@
+<!--pages/Welcome/welcome.wxml-->
+<view class="container">
+  <!--小程序图片的默认大小是宽300px,高225px  -->
+  <image class="image_header" src="/Resources/Pictures/Common/header.png"></image>
+  <text class="nickeName"><text style="color:purple">风中恣者</text>，欢迎你！</text>
+  <view class="descText_container" bindtap='onStartTap'>
+    <text class="descText">开启小程序之旅</text>
+  </view>
+
+</view>

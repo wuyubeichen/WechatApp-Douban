@@ -1,0 +1,15 @@
+<template name="LogInTwoView">
+
+  <view class="LogInTwoView_container">
+    <text class="LogInTwoView_Title">欢迎来到豆瓣</text>
+    <view class="LogInTwoView_inputView">
+      <input bindinput="bindPhoneInputView" type="text" placeholder-class="placeholder" placeholder="邮箱/手机号/用户名"></input>
+      <view class="sepratorLineView"></view>
+      <input bindinput="bindPasswordInputView" type="text" placeholder-class="placeholder" placeholder="密码"></input>
+    </view>
+    <button class="LogInTwoView_LoginBtn">登录</button>
+
+
+  </view>
+
+</template>

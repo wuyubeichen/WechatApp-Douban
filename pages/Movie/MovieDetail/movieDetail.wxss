@@ -1,0 +1,165 @@
+/* pages/StudyFiles/MovieDetail/movieDetail.wxss */
+@import "../../../Components/Movie/StarView_template.wxss";
+
+
+/* 背景图片 */
+
+.movie_BgImage {
+  width: 750rpx;
+  height: 320rpx;
+  /* 模糊效果 */
+  -webkit-filter: blur(20px)
+
+}
+
+/* 电影基本信息 */
+.movie_BasicInfo {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0rpx;
+  width: 750rpx;
+  height: 320rpx;
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+}
+
+.originalTitle {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.countryAndyear {
+  color: white;
+  font-size: 16px;
+  margin-top: 30rpx;
+}
+
+.movieLikeAndComments {
+  margin-top: 50rpx;
+}
+
+.movie_BasicInfo_redText {
+  color: red;
+  font-size: 14px;
+}
+
+.movie_BasicInfo_markText {
+  margin-left: 20rpx;
+  color: #666;
+  font-size: 14px;
+}
+
+.movieLikeAndComments text:nth-child(3) {
+  margin-left: 30rpx;
+}
+
+/* 小图片的放置 */
+
+.movie_MovieImage {
+  height: 238rpx;
+  width: 175rpx;
+  position: absolute;
+  top: 150rpx;
+  right: 30rpx;
+}
+
+/* 电影详情部分 */
+
+.movie_DetailInfo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+}
+
+.movie_DetailInfo_originalTitle {
+  color: #1f3463;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+
+.movie_DetailInfo_items {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx;
+}
+
+.movie_DetailInfo_items text {
+  font-size: 13px;
+  color: #999;
+}
+
+/* 分割线 */
+
+.seperatorLineView {
+  margin-top: 45rpx;
+  height: 1px;
+  width: 750rpx;
+  background-color: #d9d9d9;
+}
+
+/* 电影具体介绍说明 */
+.summaryView {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 20px; */
+  padding: 30rpx;
+}
+
+.summaryView_title {
+  font-size: 15px;
+  color: #999;
+}
+
+.summaryView_content {
+  margin-top: 20px;
+  font-size: 15px;
+  color: "#333333";
+  line-height: 40rpx;
+  letter-spacing: 1px;
+}
+
+
+
+/* 主要演员的信息 */
+.castView{
+  display: flex;
+  flex-direction: column;
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+}
+
+.castView_title{
+  margin-bottom: 30rpx;
+  font-size: 15px;
+  color: #999;
+}
+
+.castView_ScollView{
+  white-space: nowrap;
+}
+
+.cast_item{
+    display:inline-flex;
+    flex-direction: column;
+    margin-bottom: 20rpx;
+    margin-right: 40rpx;
+    width: 170rpx;
+    text-align:center;
+    /* 长的名字可以换行 */
+    white-space: normal; 
+
+}
+
+.cast-img{
+    width: 170rpx;
+    height: 210rpx;
+}
+.cast-name{
+  margin: 10rpx auto 0rpx;
+  font-size: 15px;
+  color: #333333;
+}

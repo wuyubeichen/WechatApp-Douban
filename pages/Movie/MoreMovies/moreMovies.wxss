@@ -1,0 +1,3 @@
+/* pages/StudyFiles/MoreMovies/moreMovies.wxss */
+@import "../../../Components/Movie/MoreMovieView_template.wxss"; 
+

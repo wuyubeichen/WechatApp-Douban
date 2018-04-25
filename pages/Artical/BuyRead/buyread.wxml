@@ -1,0 +1,33 @@
+<!--pages/BuyRead/buyread.wxml-->
+<import src="../../../Components/ArticalCell/ArticalCell_template.wxml" />
+<import src="/Components/Movie/MoreMovieView_template.wxml" />
+
+
+
+<view class="container">
+
+<!--顶部搜索视图  -->
+  <view class="searchView">
+    <icon class="searchIcon" type="search" size="15" color="#405f80"></icon>
+    <input class="searchInputView" placeholder-class="placeholder" type="text" placeholder='搜索' bindfocus='onBindFocus' bindinput="onBindInput" bindconfirm="onBindConfirm" bindblur="onBindBlur"></input>
+    <image class="readyData" wx:if="{{searchPannel_show}}" src="../../../Resources/Pictures/Common/cancel.png" class="searchCancelImg" bindtap='onCancelSearch'></image>
+  </view>
+
+
+<!--文章列表  -->
+  <view wx:if="{{container_show}}" style="padding-top: 10rpx">
+    <block wx:for="{{articals}}" wx:for-item="item" wx:for-index="index">
+      <!-- 为了绑定响应事件新加一层View,而且绑定了自定义属性 -->
+      <!--这里为了方便传递了整个item数据  -->
+      <view catchtap="onAritcalClick" data-artical-Item="{{item}}" data-artical-ID="{{item.articalID}}">
+        <template is="ArticalCell" data="{{...item}}" />
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<!--电影搜索结果  -->
+<view wx:if="{{searchPannel_show}}" class="search_pannel">
+  <template is="MoreMovieView" data="{{movies:searchResult.movies}}" />
+</view>

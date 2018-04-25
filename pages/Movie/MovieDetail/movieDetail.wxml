@@ -1,0 +1,75 @@
+<!--pages/StudyFiles/MovieDetail/movieDetail.wxml-->
+<import src="../../../Components/Movie/StarView_template.wxml" />
+
+<view class="container">
+
+  <!--电影背景图  -->
+  <image class="movie_BgImage" src="{{movieDetail.movieImg}}" mode="aspectFill"></image>
+
+  <!--电影基本信息  -->
+  <view class="movie_BasicInfo" data-src="{{movieDetail.movieImg}}" catchtap='onPreviewBigImage'>
+    <text class="originalTitle">{{movieDetail.title}}</text>
+    <text class="countryAndyear">{{movieDetail.country+" · " + movieDetail.year}}</text>
+    <view class="movieLikeAndComments">
+      <text class="movie_BasicInfo_redText">{{movieDetail.wishCount}}</text>
+      <text class="movie_BasicInfo_markText">喜欢</text>
+      <text class="movie_BasicInfo_redText">{{movieDetail.commentCount}}</text>
+      <text class="movie_BasicInfo_markText">条评论</text>
+    </view>
+  </view>
+
+  <!--电影小图片  -->
+  <image class="movie_MovieImage" src="{{movieDetail.movieImg}}" mode='aspectFill' data-src="{{movieDetail.movieImg}}" catchtap='onPreviewBigImage' />
+
+  <!--电影详细信息  -->
+  <view class="movie_DetailInfo">
+
+    <view class="movie_DetailInfo_originalTitle">
+      <text>{{movieDetail.originalTitle}}</text>
+    </view>
+
+    <view class="movie_DetailInfo_items">
+      <text class="markTitle">评分：</text>
+      <template is="StarView" data="{{stars:movieDetail.stars, average:movieDetail.average}}" />
+    </view>
+
+    <view class="movie_DetailInfo_items">
+      <text class="markTitle">导演：</text>
+      <text>{{movieDetail.director.name}}</text>
+    </view>
+
+    <view class="movie_DetailInfo_items">
+      <text class="markTitle">主演：</text>
+      <text class="markTitle">{{movieDetail.casts}}</text>
+    </view>
+
+    <view class="movie_DetailInfo_items">
+      <text class="markTitle">类型：</text>
+      <text class="markTitle">{{movieDetail.generes}}</text>
+    </view>
+  </view>
+
+
+  <!-- 有关电影剧情的详细介绍-->
+  <view class="seperatorLineView"> </view>
+  <view class="summaryView">
+    <text class="summaryView_title">剧情简介</text>
+    <text class="summaryView_content">{{movieDetail.summary}}</text>
+  </view>
+
+
+  <!-- 主要演员的信息 -->
+  <view class="seperatorLineView"> </view>
+  <view class="castView">
+    <text class="castView_title">影人</text>
+    <scroll-view class="castView_ScollView" scroll-x="true">
+      <block wx:for="{{movieDetail.castsInfo}}" wx:for-item="item">
+        <view class="cast_item">
+          <image class="cast-img" src="{{item.img}}"></image>
+          <text class="cast-name">{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+</view>

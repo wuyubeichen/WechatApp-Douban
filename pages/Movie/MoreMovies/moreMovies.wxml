@@ -1,0 +1,5 @@
+<!--pages/StudyFiles/MoreMovies/moreMovies.wxml-->
+<import src="/Components/Movie/MoreMovieView_template.wxml" />
+<view class="container">
+  <template is="MoreMovieView" data="{{movies}}" />
+</view>
