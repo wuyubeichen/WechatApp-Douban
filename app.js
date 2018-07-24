@@ -12,91 +12,35 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        let code = res.code;
+        console.log("code:"+code);
       }
     }),
 
-
-    //授权获取用户信息
-    wx.getUserInfo({
-      success: res => {
-        console.log("getUserInfo:success");
-        this.globalData.userInfo = res.userInfo
-      },
-      fail(error) {
-        console.log(error);
-        console.log("getUserInfo:fail");
-      }
-    })
-  },
-
-    /*
-
-    wx.getSetting({
-      success:res =>{
-        if (res.authSetting['scope.userInfo']) {
-          //记录已授权，且获取了用户信息
-          this.haveAuthForUserInfo = true;
-          wx.getUserInfo({
-            success: res => {
-              this.globalData.userInfo = res.userInfo
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }else{
-          this.haveAuthForUserInfo = false;
-        }
-      }
-    })
-
-
-
-    //请求授权并获取用户微信信息
+    // 获取用户信息
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
-          //1.已经授权，可以直接调用getUserInfo获取头像昵称，不会弹框
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
-              this.globalData.userInfo = res.userInfo
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 可以将res发送给后台解码出 unionId
+              this.globalData.userInfo = res.userInfo;
+              this.globalData.encryptedData = res.encryptedData;
+              this.globalData.iv = res.iv;
+              // 由于getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }
             }
           })
-        } else {
-          //2.提示用户开放授权,并获取用户信息
-          console.log("提示授权");
-          wx.authorize({
-            scope: 'scope.userInfo',
-            success() {
-              wx.getUserInfo({
-                success: res => {
-                  console.log("请求授权成功！");
-                  this.globalData.userInfo = res.userInfo
-                  // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-                  // 所以此处加入 callback 以防止这种情况
-                  if (this.userInfoReadyCallback) {
-                    this.userInfoReadyCallback(res)
-                  }
-                }
-              })
-            },
-            fail() {
-              console.log("请求授权失败！");
-            }
-
-          })
         }
       }
     })
-    */
 
-
-
+  },
+ 
   //生命周期函数:小程序启动或者从后台进入前台显示，会触发onShow方法，监听小程序显示。
   onShow: function () {
 
@@ -114,6 +58,8 @@ App({
 
   globalData: {
     userInfo: null,
+    encryptedData:null,
+    iv:null,
     haveAuthForUserInfo:false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     
@@ -126,28 +72,6 @@ App({
 
 /*
 代码暂存
-  {
-        "pagePath": "pages/Home/home",
-        "iconPath": "Resources/Pictures/Tabbar/tabbar_icon_zixun_default.png",
-        "selectedIconPath": "Resources/Pictures/Tabbar/tabbar_icon_zixun_selected.png",
-        "text": "专家咨询"
-  },
-
-  
-  {
-        "pagePath": "pages/Bargainers/bargainers",
-        "iconPath": "Resources/Pictures/Tabbar/tabbar_icon_kanjiashi_default.png",
-        "selectedIconPath": "Resources/Pictures/Tabbar/tabbar_icon_kanjiashi_selected.png",
-        "text": "二手房砍价师"
-  },
-
-
-   {
-        "pagePath": "pages/BuyRead/buyread",
-        "iconPath": "Resources/Pictures/Tabbar/tabbar_icon_gonglue_default.png",
-        "selectedIconPath": "Resources/Pictures/Tabbar/tabbar_icon_gonglue_selected.png",
-        "text": "买房必读"
-      },
   {
         "pagePath": "pages/logs/logs",
         "iconPath": "Resources/Pictures/Tabbar/tabbar_icon_faxian_default.png",

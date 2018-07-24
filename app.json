@@ -1,7 +1,7 @@
 {
   "pages": [
+    "pages/Movie/Movies/Movies",
     "pages/Mine/Mine/mine",        
-    "pages/Movie/Movies/Movies",        
     "pages/Movie/MovieDetail/movieDetail",
     "pages/Movie/MoreMovies/moreMovies",
     "pages/Movie/MovieSearch/movieSearch",

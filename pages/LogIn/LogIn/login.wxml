@@ -3,7 +3,7 @@
 
 <import src="../../../Components/LogInView/LogInTwoView_template.wxml" />
 
-<template  wx:if="{{userInfo}}" is="LogInOneView" data="{{...userInfo}}"></template>
+<template  wx:if="{{userInfo && !needAccountLoginView}}" is="LogInOneView" data="{{...userInfo}}"></template>
 
 <template  wx:else is="LogInTwoView" ></template>
 

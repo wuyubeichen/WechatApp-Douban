@@ -32,7 +32,7 @@
   line-height: 100rpx;
 }
 
-.LogInOneView_phoneLogin {
+.LogInOneView_AccountLogin {
   margin-top: 30rpx;
   font-size: 15px;
   color: #999;

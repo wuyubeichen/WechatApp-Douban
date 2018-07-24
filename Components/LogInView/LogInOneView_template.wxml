@@ -3,8 +3,8 @@
   <view class="LogInOneView_container">
     <image class="LogInOneView_headerImage" src="{{avatarUrl}}" />
     <text class="LogInOneView_name">{{nickName}}</text>
-    <button class="LogInOneView_WechatLogin">使用微信账号登录</button>
-    <view class="LogInOneView_phoneLogin">豆瓣账号登录</view>
+    <button class="LogInOneView_WechatLogin" bindtap='weixinLoginTap'>使用微信账号登录</button>
+    <view class="LogInOneView_AccountLogin" bindtap='accountLoginTap'>豆瓣账号登录</view>
   </view>
 
 </template>

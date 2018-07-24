@@ -8,7 +8,7 @@ Page({
    */
   data: {
     userInfo: null,
-    haveAuthForUserInfo: false//是否授权使用用户信息
+    needAccountLoginView:false
   },
 
   /**
@@ -66,26 +66,38 @@ Page({
   */
   },
 
-  checkAuthoForUserInfo:function(){
-    var that = this;
-    wx.getUserInfo({
-      success: res => {
-        console.log("getUserInfo:success");
-        app.globalData.userInfo = res.userInfo
-        this.setData({
-          userInfo: res.userInfo
-        });
-      },
-      fail(error) {
-        console.log(error);
-        console.log("getUserInfo:fail");
-        app.globalData.userInfo = null;
-        this.setData({
-          userInfo: null
-        });
+
+
+
+  //选择微信或者账号登录
+  weixinLoginTap:function(e){
+    //1.使用微信longin方法获取临时登录凭证
+    wx.login({
+      success:res=>{
+        let code = res.code;
+        if(code){
+        //2.将登录凭证发送自己app的服务端
+        //并在你的服务端使用该凭证向微信服务器换取
+        //该微信用户的唯一标识(openid)和会话密钥(session_key)
+        /*
+          wx.request({
+            url: '自己服务器提供的api',
+            data: { code: code }
+          })
+        */
+        }else{
+          console.log('获取用户登录态失败：' + res.errMsg);
+        }
       }
-    })
+    });
   },
+
+  accountLoginTap:function(e){
+    this.setData({
+      needAccountLoginView:true
+    });
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -98,6 +110,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    that.setData({
+      needAccountLoginView:false     
+    });
     this.checkAuthoForUserInfo();
   },
 
